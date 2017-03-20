@@ -1,0 +1,130 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Resume_IsaacMayes.tex
+%% Source: <https://github.com/mayesidevel/Resume_IsaacMayes>
+%% Template: <https://github.com/zachscrivena/simple-resume-cv>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,MMMyyyy,nonstopmode]{simpleresumecv}
+% Class options:
+% a4paper, letterpaper, nonstopmode, draftmode
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Resume Info.
+\newcommand{\CVAuthor}{Isaac Mayes}
+\newcommand{\CVTitle}{Isaac Mayes's Resume}
+\newcommand{\CVNote}{Resume compiled on {\today} for Isaac Mayes}
+\newcommand{\CVWebpage}{http://www.mayesid.com}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfcreator={XeLaTeX},
+pdfsubject={\CVWebpage},
+pdfproducer={},
+pdfkeywords={Resume,CV,Isaac,Mayes,Programmer,Developer},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Disable page numbers.
+\pagestyle{empty}
+
+% Shorthand.
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% START OF RESUME CONTENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+\href{https://www.google.com/maps/place/Billings,+MT/}
+***REMOVED***, Billings, MT 59102}
+\,\SubBulletSymbol\,
+***REMOVED***
+\par
+\href{mailto:contact@mayesid.com}
+{contact@mayesid.com}
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\url{\CVWebpage}}
+\end{SubTitle}
+
+\begin{Body}
+
+%%%%%%%%%%%%%%
+%% WORK EXPERIENCE %%
+%%%%%%%%%%%%%%
+
+\Section
+{Work \newline Experience}
+{Work Experience}
+{PDF:WorkExperience}
+
+%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%
+
+\Section
+{Education}
+{Education}
+{PDF:Education}
+
+%%%%%%%%%%%%%%%%
+%% ADDITIONAL ACTIVITIES %%
+%%%%%%%%%%%%%%%%
+
+\Section
+{Additional \newline Activities}
+{Additional Activities}
+{PDF:AdditionalActivities}
+
+%%%%%%%%%%%%%%%%
+%% TECHNOLOGIES & SKILLS %%
+%%%%%%%%%%%%%%%%
+
+\Section
+{Technologies \newline \& Skills}
+{Technologies \& Skills}
+{PDF:TechnologiesAndSkills}
+
+%%%%%%%%%%%
+%% REFERENCES %%
+%%%%%%%%%%%
+
+\Section
+{References}
+{References}
+{PDF:References}
+
+May be provided by request.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END OF RESUME CONTENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{Body}
+
+\end{document}
