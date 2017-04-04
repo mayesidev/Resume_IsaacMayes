@@ -78,7 +78,7 @@ right=0.50in,
 top=0.50in,
 bottom=0.50in,
 nohead,
-includefoot]{geometry}
+nofoot]{geometry}
 
 % PDF settings and properties.
 \RequirePackage{hyperref}
@@ -182,19 +182,17 @@ BoldItalicFont=FreeSerifBoldItalic]
 \newcommand{\SubBulletSymbol}{{\normalfont\fontsize{6}{7.2}\selectfont\raisebox{0.17em}{\char"25CF}}}
 \newcommand{\TildeSymbol}{{\normalfont\char"007E}}
 
-% Headers and footers: Blank header, page number in footer.
+% Headers and footers: Blank header, blank footer.
 \AtEndDocument{\null\label{LastPage}}
 \newcommand{\PageKOfN}{{\UseHeaderFooterFont{Page}~\thepage~of~\pageref{LastPage}}}
 \newcommand{\DraftStamp}{{\UseHeaderFooterFont\color{red}DRAFT~\Timestamp}}
 
 \ifnum\TypesetInDraftMode=0
 \newcommand{\HeaderText}{}
-\newcommand{\FooterText}{\hfill\PageKOfN\hfill}
+\newcommand{\FooterText}{}
 \else
 \newcommand{\HeaderText}{}
-\newcommand{\FooterText}{\null\hphantom{\DraftStamp}\hfill%
-\PageKOfN\hfill%
-\DraftStamp\null}
+\newcommand{\FooterText}{}
 \fi
 
 \def\ps@plain{%
@@ -237,19 +235,19 @@ BoldItalicFont=FreeSerifBoldItalic]
 % Macro: Body (rest of the document).
 \newenvironment{Body}
 {%
-\par\vspace{1.5\baselineskip}%
+\par\vspace{1.25\baselineskip}%
 \begin{list}
 {}
-{\setlength\leftmargin{1.2in}%
+{\setlength\leftmargin{1.0in}%
 \setlength\rightmargin{0in}%
-\setlength\labelwidth{1.2in}%
+\setlength\labelwidth{1.0in}%
 \setlength\labelsep{0in}%
 \setlength\listparindent{0in}%
 \setlength\itemindent{0in}%
 \setlength\parskip{0in}%
 \setlength\topsep{0in}%
 \setlength\parsep{0in}%
-\setlength\itemsep{0.90\baselineskip}%
+\setlength\itemsep{1.0\baselineskip}%
 \setlength\partopsep{0in}%
 %\raggedright%
 }%
@@ -268,7 +266,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 % Macro: Section (new section for Education, Research Experience, etc.).
 \newcommand{\Section}[3]
 {\par\pdfbookmark[2]{#2}{#3}%
-\item[\smash{\parbox[t]{1.2in}{\UseSectionFont\raggedright\MakeUppercase{#1}}}]%
+\item[\smash{\parbox[t]{1.0in}{\UseSectionFont\raggedright\MakeUppercase{#1}}}]%
 \par}
 
 % Macro: SubSection.
