@@ -1,37 +1,74 @@
-% !TEX TS-program = xelatex
-% !TEX encoding = UTF-8 Unicode
-% -*- coding: UTF-8; -*-
-% vim: set fenc=utf-8
+% Isaac Mayes's Resume
+% Typeset using pdfLaTeX
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Resume_IsaacMayes.tex
-%	Source: <https://github.com/mayesidevel/Resume_IsaacMayes>
-%	Template: <https://github.com/zachscrivena/simple-resume-cv>
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[9pt,letterpaper]{extarticle}
 
-\documentclass[letterpaper,MMMyyyy,nonstopmode]{simpleresumecv}
-% Class options:
-% a4paper, letterpaper, nonstopmode, draftmode
-% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+\RequirePackage{hyperref}
 
-%%%%%%%%%%
-%	PREAMBLE
-%%%%%%%%%%
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
 
-% Resume Info.
-\newcommand{\CVAuthor}{Isaac Mayes}
-\newcommand{\CVTitle}{Isaac Mayes's Resume}
-\newcommand{\CVNote}{Resume compiled on {\today} for Isaac Mayes}
-\newcommand{\CVWebpage}{http://www.mayesid.com}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% Datestamp format (default): {yyyy}{MM}{dd} ---> MMM yyyy (e.g., Jan 2008).
+\newcommand{\DatestampYMD}[3]{\mbox{\ShortMonth{#2} #1}}
+\newcommand{\DatestampYM}[2]{\mbox{\ShortMonth{#2} #1}}
+\newcommand{\DatestampY}[1]{#1}
+
+% Abbreviations for months.
+\newcommand{\ShortMonth}[1]{%
+\ifcase#1\relax
+\or Jan%
+\or Feb%
+\or Mar%
+\or Apr%
+\or May%
+\or Jun%
+\or Jul%
+\or Aug%
+\or Sep%
+\or Oct%
+\or Nov%
+\or Dec%
+\fi}
 
 % PDF settings and properties.
 \hypersetup{
-pdftitle={\CVTitle},
-pdfauthor={\CVAuthor},
-pdfcreator={XeLaTeX},
-pdfsubject={\CVWebpage},
+pdftitle={Isaac Mayes's Resume},
+pdfauthor={Isaac Mayes},
+pdfcreator={pdfLaTeX},
+pdfsubject={http://www.mayesid.com},
 pdfproducer={},
-pdfkeywords={Resume,CV,Isaac,Mayes,MayesIDevel,Software,Programmer,Developer,Engineer},
+pdfkeywords={Resume,CV,Isaac,Mayes,MayesIDevel,Software,Programmer,Developer,Engineer,C\#,CSharp,LaTeX},
 unicode=true,
 bookmarks=true,
 bookmarksopen=true,
@@ -41,291 +78,154 @@ pdfpagemode=UseOutlines,
 hidelinks,
 breaklinks}
 
-% Shorthand.
-\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
-\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
-
-%%%%%%%%%%%%%%%%%%
-%	START OF RESUME CONTENT
-%%%%%%%%%%%%%%%%%%
-
+%
+% Resume content starts here.
+%
 \begin{document}
 
-%%%%%%%%%%%
-%	TITLE BLOCK
-%%%%%%%%%%%
+\begin{center}
+{\Huge \textbf{Isaac Mayes}}
+\pdfbookmark[0]{Isaac Mayes}{PDF:IsaacMayes}
 
-\Title{\CVAuthor}
+\href{https://www.google.com/maps/place/Billings,+MT/}{Billings, MT, USA 59102}\ \textbullet
+\ \href{http://www.mayesid.com}{www.mayesid.com}
+\\
+\href{tel:+15129537302}{+1\,(512)\,953-7302}\ \textbullet
+\ \href{mailto:contact@mayesid.com}{contact@mayesid.com}
+\pdfbookmark[1]{Contact Information}{PDF:ContactInformation}
+\end{center}
 
-\begin{SubTitle}
-\href{https://www.google.com/maps/place/Billings,+MT/}
-{Billings, MT, USA 59102}
-\,\SubBulletSymbol\,
-\href{tel:+15129537302}
-{+1\,(512)\,953-7302}
-\par
-\href{mailto:contact@mayesid.com}
-{contact@mayesid.com}
-\,\SubBulletSymbol\,
-\href{\CVWebpage}
-{\url{\CVWebpage}}
-\end{SubTitle}
+\hrule
+\vspace{-0.2em}
+\subsection*{Technical Skills}
+\pdfbookmark[1]{Technical Skills}{PDF:TechnicalSkills}
 
-\begin{Body}
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+	\pdfbookmark[2]{Languages}{PDF:Languages}
+	C\#, SQL, Java, Python, Powershell, Batch, \LaTeX
+	\item[Technologies:]
+	\pdfbookmark[2]{Technologies}{PDF:Technologies}
+	.NET Framework, Active Directory, XACML Architecture, Entity Framework, Windows Forms (WinForms), Windows Presentation Foundation (WPF), XAML, Internet Information Services (IIS), XML, NUnit, Moq, Apache log4net, Subversion (SVN)
+	\item[Applications:]
+	\pdfbookmark[2]{Applications}{PDF:Applications}
+	Visual Studio, ReSharper, SQL Server Management Studio (SSMS), SQL Server Profiler, Visual Studio Code
+\end{description*}
+\end{indentsection}
 
-%%%%%%%%%%%%%%%%%%
-%	LANGUAGES & TECHNOLOGIES
-%%%%%%%%%%%%%%%%%%
+\hrule
+\vspace{-0.2em}
+\subsection*{Experience}
+\pdfbookmark[1]{Experience}{PDF:Experience}
 
-\Section
-{Skills}
-{Skills}
-{PDF:Skills}
+\begin{itemize}
+	\parskip=0.1em
 
-\SubSection
-{Languages}
-{Languages}
-{PDF:Languages}
+	\item
+	\pdfbookmark[2]{Computers Unlimited}{PDF:ComputersUnlimited}
+	\headerrow
+		{\textbf{\href{http://www.cu.net}{Computers Unlimited}}}
+		{\textbf{Billings, MT}}
+	\pdfbookmark[3]{Industrial Programmer}{PDF:IndustrialProgrammer}
+	\headerrow
+		{\emph{Programmer, \href{http://www.cu.net/industrial}{Industrial Group}}}
+		{\emph{\DatestampYM{2014}{05} -- Present}}
+	\begin{itemize*}
+		\item Code owner and point of contact for several core systems, including: security services and Active Directory integrations, user set-up and authorization applications, user-defined information management framework, SQL data audit system, software set-up and system configuration applications, SQL data migration framework, as well as a batch job processing service and the corresponding job scheduling application.
+		\item Current Architecture Advocate for the Industrial Group. Requires attendance at weekly meetings with other architecture leads from each group to discuss current development initiatives and programming standards. Also responsible for disseminating architecture-related information to other group members, and assisting with related questions as they arise.
+		\item Regularly work with Technical and Application Support teams on troubleshooting customer issues, in a timely manner.
+	\end{itemize*}
+	\pdfbookmark[3]{Regression Intern}{PDF:RegressionIntern}	
+	\headerrow
+		{\emph{Intern, Regression/Automated QA Group}}
+		{\emph{\DatestampYM{2014}{01} -- \DatestampYM{2014}{05}}}
+	\begin{itemize*}
+		\item Analyzed nightly unit test runs, assigned QA logs for broken tests, and compiled a daily report on the status of each build.
+		\item Automated written test plans in a proprietary regression framework, and documented test plan details on an internal wiki.
+		\item Assisted in the maintenance of internal tools used by Regression, including improvements to the Regression Testing Framework.
+	\end{itemize*}
 
-\BulletItem
-C\#, SQL, Java, Python, Powershell, Batch
+	\item
+	\pdfbookmark[2]{Rocky Mountain College}{PDF:Experience-RockyMountainCollege}
+	\headerrow
+		{\textbf{\href{http://www.rocky.edu}{Rocky Mountain College}}}
+		{\textbf{Billings, MT}}
+	\pdfbookmark[3]{Website Administrator  (The Summit)}{PDF:WebsiteAdmininistrator_Summit}
+	\headerrow
+		{\emph{Website Administrator, \href{http://summit.rocky.edu}{Student Publications}}}
+		{\emph{\DatestampYM{2013}{01} -- \DatestampYM{2013}{05} \& \DatestampYM{2014}{01} -- \DatestampYM{2014}{05}}}
+	\begin{itemize*}
+		\item Administrated the website for the student newspaper, The Summit, during all active periods from 2013 through spring 2014.
+		\item Worked with editors to post news content, pictures, and articles on a regular basis; coinciding with publications of the paper.
+		\item Maintained the website's WordPress install, and managed changes to improve the users' experience and website functionality.
+	\end{itemize*}
+	\pdfbookmark[3]{System Administrator}{PDF:SystemAdministrator_CSDept}
+	\headerrow
+		{\emph{System Administrator, \href{http://cs.rocky.edu}{Computer Science Department}}}
+		{\emph{\DatestampYM{2013}{09} -- \DatestampYM{2014}{05}}}
+	\begin{itemize*}
+		\item Handled network troubleshooting, assisted users with account and software issues, and researched improvements to be made.
+		\item Physically maintained the computer lab set-up by routing cables, installing UPSs, and replacing old or faulty hardware.
+		\item Updated and installed new software, including a major OS version upgrade to OS X Mavericks, on all machines.
+	\end{itemize*}
+	\pdfbookmark[3]{Paid Note-Taker}{PDF:PaidNoteTaker}
+	\headerrow
+		{\emph{Paid Note-Taker, \href{https://www.rocky.edu/student-life/student-support/academic-support/ServicesAcademicSuccess.php}{Services for Academic Success}}}
+		{\emph{\DatestampYM{2013}{09} -- \DatestampYM{2013}{12}}}
+	\begin{itemize*}
+		\item Required to take complete, detailed, well-written notes for use by students requiring additional academic assistance.
+		\item Responsible for submitting photocopies of all notes taken on a weekly deadline.
+		\item Notes taken for the \href{https://www.rocky.edu/academics/catalog/program/9/Computer_Science#courses-content}{Computer Science classes: CSC 351 (Algorithms), and CSC 352 (Programming Language Study I - Python)}.
+	\end{itemize*}
+	\pdfbookmark[3]{By-Appointment Tutor}{PDF:ByAppointmentTutor}
+	\headerrow
+		{\emph{By-Appointment Tutor, \href{https://www.rocky.edu/student-life/student-support/academic-support/ServicesAcademicSuccess.php}{Services for Academic Success}}}
+		{\emph{\DatestampYM{2012}{09} -- \DatestampYM{2014}{05}}}
+	\begin{itemize*}
+		\item Held appointments with students, on request, in order to best fit their schedules and tailor aid according to their individual needs.
+		\item Promoted the understanding of core concepts and best practices, and assisted with technical questions on syntax and semantics in programming assignments.
+		\item Services primarily requested by students taking \href{https://www.rocky.edu/academics/catalog/program/9/Computer_Science#courses-content}{freshman-level introductory courses (CSC 130/131)}.
+	\end{itemize*}
+	\pdfbookmark[3]{Help Desk Assistant}{PDF:HelpDeskAssistant}
+	\headerrow
+		{\emph{Help Desk Assistant, \href{https://rocky.edu/student-life/student-support/academic-computing/}{Academic Computing}}}
+		{\emph{\DatestampYM{2011}{09} -- \DatestampYM{2013}{05}}}
+	\begin{itemize*}
+		\item Maintained campus printers and computer lab PCs; including the restoration and configuration of damaged and new machines.
+		\item Aided students with troubleshooting networking issues in on-campus housing: from configuring routers, to handling port issues on the buildings' network switches.
+		\item Provided technical support for staff and students in a timely manner through an online support ticket system, and in-person.
+	\end{itemize*}
+	\pdfbookmark[3]{Website Administrator (CS Department)}{PDF:WebsiteAdministrator_CSDepartment}
+	\headerrow
+		{\emph{Website Administrator, \href{http://cs.rocky.edu/programming-competitions/high-school-competions/}{Computer Science Department}}}
+		{\emph{\DatestampYM{2010}{09} -- \DatestampYM{2011}{05}}}
+	\begin{itemize*}
+		\item Restructured the Computer Science department's website for their annual High School Programming Competitions.
+		\item Archived and organized media content, including: pictures, videos, problem sets, and results from past competitions.
+		\item Updated the website's WordPress installation, plugins, and theme, in order to improve the accessibility of the content.
+	\end{itemize*}
+\end{itemize}
 
-\Gap
 
-\SubSection
-{Technologies}
-{Technologies}
-{PDF:Technologies}
+\hrule
+\vspace{-0.2em}
+\subsection*{Education}
+\pdfbookmark[1]{Education}{PDF:Education}
 
-\BulletItem
-.NET Framework, Active Directory, XACML Architecture, Entity Framework, Windows Forms (WinForms), Windows Presentation Foundation (WPF), XAML, Internet Information Services (IIS), XML, NUnit, Moq, Apache log4net, Subversion (SVN)
+\begin{itemize}
+	\parskip=0.1em
 
-\Gap
-
-\SubSection
-{Applications}
-{Applications}
-{PDF:Applications}
-
-\BulletItem
-Visual Studio, ReSharper, SQL Server Management Studio (SSMS), SQL Server Profiler, Visual Studio Code
-
-%%%%%%%%%%%%%%
-%	WORK EXPERIENCE
-%%%%%%%%%%%%%%
-
-\Section
-{Work \newline Experience}
-{Work Experience}
-{PDF:WorkExperience}
-
-\SubSection
-{\href{http://www.cu.net}
-{Computers Unlimited}
-\hfill Billings, MT, USA}
-{Computers Unlimited}
-{PDF:ComputersUnlimited}
-
-\Gap
-
-\Entry
-Programmer,
-\href{http://www.cu.net/industrial}
-{Industrial Group}
-\hfill
-\DatestampYM{2014}{05} --
-Present
-\begin{Detail}
-\BulletItem
-Code owner and point of contact for several core systems, including: security services and Active Directory integrations, user set-up and authorization applications, custom information management framework, SQL data audit system, software set-up and system configuration applications, SQL data migration framework, as well as a batch job processing service and the corresponding job scheduling application.
-\BulletItem
-Current Architecture Advocate for the Industrial Group. Requires attendance at weekly meetings with other architecture leads from each group to discuss current development initiatives and programming standards. Also responsible for disseminating architecture-related information to other group members, and assisting with related questions as they arise.
-\BulletItem
-Regularly work with Technical and Application Support teams on troubleshooting customer issues, in a timely manner.
-\end{Detail}
-
-\Gap
-
-\Entry
-Intern,
-Regression/Automated QA Group
-\hfill
-\DatestampYM{2014}{01} --
-\DatestampYM{2014}{05}
-\begin{Detail}
-\BulletItem
-Analyzed nightly unit test runs, assigned QA logs for broken tests, and compiled a daily report on the status of each build.
-\BulletItem
-Automated written test plans in the proprietary regression framework, and documented test plan details on the internal wiki.
-\BulletItem
-Assisted in the maintenance of internal tools used by Regression, including improvements to the regression testing framework.
-\end{Detail}
-
-\Gap
-
-\SubSection
-{\href{http://www.rocky.edu}
-{Rocky Mountain College}
-\hfill Billings, MT, USA}
-{Rocky Mountain College}
-{PDF:RockyMountainCollegeWorkExp}
-
-\Gap
-
-\Entry
-Website Administrator,
-\href{http://summit.rocky.edu}
-{Student Publications}
-\hfill
-\DatestampYM{2013}{01} --
-\DatestampYM{2013}{05} \&
-\DatestampYM{2014}{01} --
-\DatestampYM{2014}{05}
-\begin{Detail}
-\BulletItem
-Administrated the website for the student newspaper, The Summit, during all active periods from 2013 through spring 2014.
-\BulletItem
-Worked with editors to post news content, pictures, and articles on a regular basis; coinciding with publications of the paper.
-\BulletItem
-Maintained the website's WordPress install, and managed changes to improve the users' experience and website functionality.
-\end{Detail}
-
-\Gap
-
-\Entry
-System Administrator,
-\href{http://cs.rocky.edu}
-{Computer Science Department}
-\hfill
-\DatestampYM{2013}{09} --
-\DatestampYM{2014}{05}
-\begin{Detail}
-\BulletItem
-Handled network troubleshooting, assisted users with account and software issues, and researched improvements to be made.
-\BulletItem
-Physically maintained the computer lab set-up by routing cables, installing UPSs, and replacing old or faulty hardware.
-\BulletItem
-Updated and installed new software, including a major OS version upgrade to OS X Mavericks, on all machines.
-\end{Detail}
-
-\Gap
-
-\Entry
-Paid Note-Taker,
-\href{https://www.rocky.edu/student-life/student-support/academic-support/ServicesAcademicSuccess.php}
-{Services for Academic Success}
-\hfill
-\DatestampYM{2013}{09} --
-\DatestampYM{2013}{12}
-\begin{Detail}
-\BulletItem
-Required to take complete, detailed, well-written notes for use by students requiring additional academic assistance.
-\BulletItem
-Responsible for submitting photocopies of all notes taken on a weekly deadline.
-\BulletItem
-Notes taken for the \href{https://www.rocky.edu/academics/catalog/program/9/Computer_Science#courses-content}{Computer Science classes: CSC 351 (Algorithms), and CSC 352 (Programming Language Study I - Python)}.
-\end{Detail}
-
-\Gap
-
-\Entry
-By-Appointment Tutor,
-\href{https://www.rocky.edu/student-life/student-support/academic-support/ServicesAcademicSuccess.php}
-{Services for Academic Success}
-\hfill
-\DatestampYM{2012}{09} --
-\DatestampYM{2014}{05}
-\begin{Detail}
-\BulletItem
-Held appointments with students, on request, in order to best fit their schedules and tailor aid according to their individual needs.
-\BulletItem
-Promoted the understanding of core concepts and best practices, and assisted with technical questions on syntax and semantics in programming assignments.
-\BulletItem
-Services primarily requested by students taking \href{https://www.rocky.edu/academics/catalog/program/9/Computer_Science#courses-content}{freshman-level introductory courses (CSC 130/131)}.
-\end{Detail}
-
-\Gap
-
-\Entry
-Help Desk Assistant,
-\href{https://rocky.edu/student-life/student-support/academic-computing/}
-{Academic Computing}
-\hfill
-\DatestampYM{2011}{09} --
-\DatestampYM{2013}{05}
-\begin{Detail}
-\BulletItem
-Maintained campus printers and computer lab PCs; including the restoration and configuration of damaged and new machines.
-\BulletItem
-Aided students with troubleshooting networking issues in on-campus housing: from configuring routers, to handling port issues on the buildings' network switches.
-\BulletItem
-Provided technical support for staff and students in a timely manner through an online support ticket system, and in-person.
-\end{Detail}
-
-\Gap
-
-\Entry
-Website Administrator,
-\href{http://cs.rocky.edu/programming-competitions/high-school-competions/}
-{Computer Science Department}
-\hfill
-\DatestampYM{2010}{09} --
-\DatestampYM{2011}{05}
-\begin{Detail}
-\BulletItem
-Restructured the Computer Science department's website for their annual High School Programming Competitions.
-\BulletItem
-Archived and organized media content, including: pictures, videos, problem sets, and results from past competitions.
-\BulletItem
-Updated the website's WordPress installation, plugins, and theme, in order to improve the accessibility of the content.
-\end{Detail}
-
-%%%%%%%%%%%
-%	EDUCATION
-%%%%%%%%%%%
-
-\Section
-{Education}
-{Education}
-{PDF:Education}
-
-\SubSection
-{\href{http://www.rocky.edu/}
-{Rocky Mountain College}
-\hfill Billings, MT, USA}
-{Rocky Mountain College}
-{PDF:RockyMountainCollegeEdu}
-
-\Gap
-
-\Entry
-Bachelor of Science in
-\href{http://cs.rocky.edu/}
-{Computer Science}
-\hfill
-\DatestampYM{2010}{08} --
-\DatestampYM{2014}{05}
-\begin{Detail}
-\BulletItem
-Minor in 
-\href{http://rocky.edu/academics/academic-programs/undergraduate-majors/psychology/}
-{Psychology}
-\end{Detail}
-
-%%%%%%%%%%%
-%	REFERENCES
-%%%%%%%%%%%
-
-\Section
-{References}
-{References}
-{PDF:References}
-
-May be provided by request.
-
-%%%%%%%%%%%%%%%%%%
-%	END OF RESUME CONTENT
-%%%%%%%%%%%%%%%%%%
-\end{Body}
+	\item
+	\pdfbookmark[2]{Rocky Mountain College}{PDF:Edu_RockyMountainCollege}
+	\headerrow
+		{\textbf{\href{http://www.rocky.edu/}{Rocky Mountain College}}}
+		{\textbf{Billings, MT}}
+	\pdfbookmark[3]{Bachelor of Science in Computer Science}{PDF:BSinCS}
+	\headerrow
+		{\emph{Bachelor of Science in \href{http://cs.rocky.edu/}{Computer Science}}}
+		{\emph{\DatestampYM{2010}{08} -- \DatestampYM{2014}{05}}}
+\end{itemize}
 
 \end{document}
