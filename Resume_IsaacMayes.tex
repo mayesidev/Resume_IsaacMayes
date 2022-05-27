@@ -16,9 +16,9 @@
 
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
-\newenvironment{indentsection}[1]%
+\newenvironment{indentsection}[1]
 {\begin{list}{}%
-	{\setlength{\leftmargin}{#1}}%
+	{\setlength{\leftmargin}{#1}}
 	\item[]%
 }
 {\end{list}}
@@ -36,20 +36,20 @@
 \newcommand{\DatestampY}[1]{#1}
 
 % Abbreviations for months.
-\newcommand{\ShortMonth}[1]{%
+\newcommand{\ShortMonth}[1]{
 \ifcase#1\relax
-\or Jan%
-\or Feb%
-\or Mar%
-\or Apr%
-\or May%
-\or Jun%
-\or Jul%
-\or Aug%
-\or Sep%
-\or Oct%
-\or Nov%
-\or Dec%
+\or Jan
+\or Feb
+\or Mar
+\or Apr
+\or May
+\or Jun
+\or Jul
+\or Aug
+\or Sep
+\or Oct
+\or Nov
+\or Dec
 \fi}
 
 % PDF settings and properties.
