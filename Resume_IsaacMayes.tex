@@ -14,15 +14,6 @@
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
-% indentsection style, used for sections that aren't already in lists
-% that need indentation to the level of all text in the document
-\newenvironment{indentsection}[1]
-{\begin{list}{}%
-	{\setlength{\leftmargin}{#1}}
-	\item[]%
-}
-{\end{list}}
-
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
@@ -80,7 +71,7 @@ breaklinks
 \\
 \href{tel:+15129537302}{+1\,(512)\,953-7302} \textbullet\ \href{mailto:contact@mayesid.com}{contact@mayesid.com}
 % \\
-% Line reserved for \textbullet\ Additional info
+% Line reserved for additional info
 \end{center}
 
 \hrule
@@ -88,119 +79,68 @@ breaklinks
 \subsection*{Experience}
 \pdfbookmark[1]{Experience}{PDF:Experience}
 
-\begin{itemize}
-	\parskip=0.1em
-
-	\item
-	\pdfbookmark[2]{VMware by Broadcom}{PDF:VMwareBroadcom}
-	\headerrow
-		{\textbf{\href{https://www.vmware.com/}{VMware by Broadcom}}}
-		{\textbf{Austin, TX}}
-	\pdfbookmark[3]{Staff Software Engineer}{PDF:StaffSoftwareEngineer}
-	\headerrow
-		{\emph{Staff Software Engineer, \href{https://www.vmware.com/solutions/app-platform/tanzu-labs}{VMware Tanzu Labs (formerly Pivotal Labs)}}}
-		{\emph{\DatestampYM{2022}{12} -- Present}}
-	\begin{itemize*}
-		\item Consulting as a Software Engineering Practice Lead on-site at the Army Software Factory, a partnership between the U.S. Army and Tanzu Labs, focused on training soldier and civilian software developers through delivering cloud-native software solutions.
-		\item Enabling client and consultant software engineers across the organization through guidance and mentorship in their efforts to rapidly and effectively deliver solutions for users.
-		\item Advocating for software development best-practices of Agile methodologies, lean product management, user-centered design, and Extreme Programming (XP) core practices including paired programming, test-driven development, and continuous integration.
-  		\item Developing criteria and conducting evaluations for assessing software engineers over their career progression from novice to junior to intermediate practitioner.
-		\item \textbf{Languages and Technologies:} Java, TypeScript, SQL, Spring, React, PostgreSQL, Flyway, Keycloak, Docker, GitLab, Git
-	\end{itemize*}
-
-	\item
-	\pdfbookmark[2]{Signature Science}{PDF:SignatureScience}
-	\headerrow
-		{\textbf{\href{http://www.signaturescience.com/}{Signature Science}}}
-		{\textbf{Austin, TX}}
-	\pdfbookmark[3]{Full Stack Developer/Database Specialist}{PDF:FullStackDeveloperDatabaseSpecialist}
-	\headerrow
-		{\emph{Full Stack Developer/Database Specialist, Data Science Group}}
-		{\emph{\DatestampYM{2017}{06} -- \DatestampYM{2022}{12}}}
-	\begin{itemize*}
-		\item Designed and developed relational database applications in varied technology stacks for collection and automated processing of scientific data across several projects for different federal government clients, including the U.S. Department of Defense (DoD) and U.S. Department of Homeland Security (DHS).
-		\item Consulted internal project managers, staff scientists, and external clients on technical capabilities regarding data storage processes, database automation, and web-based software solutions.
-		\item Enhanced existing solutions for data processing by working directly with end-users, both internal and external, to troubleshoot functionality, automate processes, and improve feature offerings.
-  		\item Enacted software development best-practices such as version control, isolated testing environments, shared development environments, standardized deployment procedures, and documented both coding standards and regular maintenance processes of legacy and greenfield projects.
-		\item \textbf{Languages and Technologies:} PL/SQL, T-SQL, C\#, VB.NET, JavaScript, Oracle Database, Oracle Application Express (APEX), Oracle REST Data Services (ORDS), .NET Framework, ASP.NET, Entity Framework, Microsoft SQL Server, Git, Jira, GitLab
-	\end{itemize*}
-
-	\item
-	\pdfbookmark[2]{Computers Unlimited}{PDF:ComputersUnlimited}
-	\headerrow
-		{\textbf{\href{http://www.cu.net}{Computers Unlimited}}}
-		{\textbf{Billings, MT}}
-	\pdfbookmark[3]{Industrial Programmer}{PDF:IndustrialProgrammer}
-	\headerrow
-		{\emph{Programmer, \href{http://www.cu.net/industrial}{Industrial Group}}}
-		{\emph{\DatestampYM{2014}{05} --\DatestampYM{2017}{06}}}
-	\begin{itemize*}
-		\item Responsible for development and integration of several core systems and applications, including: security services, user authentication and authorization processes, user configuration and management applications, initial system set-up and configuration applications, custom user-defined interface management framework, SQL database migration framework, SQL data auditing systems, Batch job execution scheduling application and associated job processing framework.
-		\item Served as an architecture representative for the Industrial Group. Participated in weekly architecture meetings for discussing current development initiatives and company-wide design changes with lead developers from every development group.
+\pdfbookmark[2]{Staff Software Engineer at VMware by Broadcom}{PDF:StaffSoftwareEngineerVMwareBroadcom}
+\textbf{\headerrow
+	{Staff Software Engineer, \href{https://www.vmware.com/solutions/app-platform/tanzu-labs}{VMware Tanzu Labs (formerly Pivotal Labs)} @ \href{https://www.vmware.com/}{VMware by Broadcom}}
+	{Austin, TX \DatestampYM{2022}{12} -- \DatestampYM{2025}{04}}}
+\emph{Languages and Technologies: Java, TypeScript, SQL, Spring, React, PostgreSQL, Docker, Flyway, Keycloak, GitLab, Git}
+\begin{itemize*}
+	\item Consulted on-site at the Army Software Factory (ASWF), a partnership between the U.S. Army and Tanzu Labs, for training soldier and Department of the Army (DA) civilian software engineers through delivering cloud-native software solutions for use across the Army.
+	\item As a Software Engineeing Practice Lead for the ASWF from August 2024 through March 2025:
+		\begin{itemize*}
+			\item Defined a set of core practices of the organization, consisting of aspects from Extreme Programming (XP), lean product management, and user-centered design.
+			\item Provided industry-expert guidance on requirements for the future Software Engineer Military Occupational Specialty (MOS).
+			\item Revised evaluation criteria and processes for progression through apprentice, junior, and intermediate career-levels based on direct experience working with engineers of all levels, across a variety of teams and applications, in prior roles.
+			\item Coordinated weekly presentations and facilitated discussions on software development best-practices applicable for all expereince levels.
+		\end{itemize*}
+	\item Inaugural member of the Software Development Unit (SDU) Enablement Team (SDUET), providing technical leadership to an SDU consisting of five application development teams, from September 2023 to August 2024:
+		\begin{itemize*}
+		\item Established responsibilities and expectations for the SDUET role- a new opportunity for both ASWF and Tanzu Labs.
+		\item Regularly held one-on-one mentoring sessions for twenty junior and intermediate-level engineers.
+		\item Coordinated evaluation of twelve apprentice engineers to junior-level while mentoring first-time evaluators.
+		\end{itemize*}
+		\item As a Tech Lead on an application development team from July 2023 to September 2023:
+		\begin{itemize*}
+			\item Successfully on-boarded and subsequently transitioned development of the application to a whole new team of four apprentice-level engineers and their four consultant pairs.
+		\end{itemize*} 
+		\item As a Senior Software Engineer on an application development team from December 2022 to July 2023:
+		\begin{itemize*}
+			\item Guided the team through reducing the scope of a proposed MVP, resulting in the launch of the application a month ahead of initial estimates.
+			\item Coached two apprentice-level engineers up through their evaluation to junior-level.
+			\item Met with two junior-level engineers on the team every other week to discuss career progression plans, and find opportunities for their career growth within the team.
+		\end{itemize*}
+\end{itemize*}
+\pdfbookmark[2]{Full-stack Software Developer at Signature Science}{PDF:FullStackDeveloperDatabaseSpecialistSignatureScience}
+\textbf{\headerrow
+	{Full Stack Developer/Database Specialist, Data Science Group @ \href{http://www.signaturescience.com/}{Signature Science}}
+	{Austin, TX \DatestampYM{2017}{06} -- \DatestampYM{2022}{12}}}
+\emph{Languages and Technologies: PL/SQL, T-SQL, C\#, VB.NET, JavaScript, Oracle Database, Oracle Application Express (APEX), Oracle REST Data Services (ORDS), .NET Framework, ASP.NET, Entity Framework, Microsoft SQL Server, Git, Jira, GitLab}
+\begin{itemize*}
+	\item Designed and developed relational database applications in varied technology stacks for collection and automated processing of scientific data across several projects for different federal government clients, including the U.S. Department of Defense (DoD) and U.S. Department of Homeland Security (DHS).
+	\item Consulted company directors, internal project managers, staff scientists, and external clients on technical capabilities regarding data storage processes, database automation, and web-based software solutions.
+	\item Enhanced existing solutions for data processing by working directly with end-users, both internal and external, to troubleshoot functionality, automate processes, and improve feature offerings.
+	\item Enacted software development best-practices such as version control, leveraging isolated testing and production environments, standardized deployment procedures, and created documentation for coding standards and regular-maintenance processes of legacy and greenfield devlopment projects.
+	\item Deconstructed and optimized a weekly data export process, eliminating all exporting errors, and saving the team an average of 16 hours of time generating reports per week.
+\end{itemize*}
+\pdfbookmark[2]{Industrial Programmer at Computers Unlimited}{PDF:IndustrialProgrammerComputersUnlimited}
+\textbf{\headerrow
+	{Programmer, \href{http://www.cu.net/industrial}{Industrial Group} @ \href{http://www.cu.net}{Computers Unlimited}}
+	{Billings, MT \DatestampYM{2014}{05} --\DatestampYM{2017}{06}}}
+\emph{Languages and Technologies: C\#, T-SQL, PowerShell, .NET Framework, Entity Framework, Microft SQL Server, Windows Presentation Foundation (WPF), Windows Communication Framework (WCF), Active Directory, LDAP, OAuth, Subversion (SVN)}
+\begin{itemize*}
+		\item Code owner responsible for maintenance and development on a dozen core services, frameworks, and applications for TIMS Software, spanning domains such as: authentication and authorization services, user-account management and configuration applications, a user-defined custom interface framework, new system set-up and configuration applications, an application for bulk-managing data, SQL database migration framework, SQL data auditing services and triggers, Batch job execution scheduling application and the associated system-job processing service, a general ledger application, and faxing services.
+		\item Served as an architecture team representative for the Industrial Group. Participated in weekly architecture meetings discussing current development initiatives and company-wide system design changes with lead developers from each development group.
 		\item Coordinated support and troubleshooting efforts with Application Support teams to provide resolutions to customer issues.
-		\item \textbf{Languages and Technologies:} C\#, T-SQL, PowerShell, .NET Framework, Entity Framework, Microft SQL Server, Windows Presentation Foundation (WPF), Windows Communication Framework (WCF), Active Directory, LDAP, OAuth, Subversion (SVN)
 	\end{itemize*}
-	\pdfbookmark[3]{Regression Intern}{PDF:RegressionIntern}
-	\headerrow
-		{\emph{Intern, Regression/Automated QA Group}}
-		{\emph{\DatestampYM{2014}{01} --\DatestampYM{2014}{05}}}
-	\begin{itemize*}
-		\item Assisted in the maintenance and feature implementation on internal tools used by the Regression team, including improvements to the proprietary automated Regression Testing Framework.
-  		\item Adapted written test plan steps for automation in the Regression Testing Framework and documented test plan execution details.
-  		\item Analyzed nightly unit test runs across builds for all supported software versions to compile daily reports on the statuses, while also logging failed tests and investigating to attribute causes to specific code revisions.
-		\item \textbf{Languages and Technologies:} C\#, T-SQL, .NET Framework, Microft SQL Server, SVN
-	\end{itemize*}
-
-	\item
-	\pdfbookmark[2]{Rocky Mountain College}{PDF:Experience-RockyMountainCollege}
-	\headerrow
-		{\textbf{\href{http://www.rocky.edu}{Rocky Mountain College}}}
-		{\textbf{Billings, MT}}
-	\pdfbookmark[3]{Website Administrator (The Summit)}{PDF:WebAdmin_Summit}
-	\headerrow
-		{\emph{Website Administrator, Student Publications (The Summit)}}
-		{\emph{\DatestampYM{2013}{01} --\DatestampYM{2013}{05} \&\DatestampYM{2014}{01} --\DatestampYM{2014}{05}}}
-	\pdfbookmark[3]{Paid Note-Taker}{PDF:PaidNoteTaker}
-	\headerrow
-		{\emph{Paid Note-Taker (Algorithms, Python language study), \href{https://www.rocky.edu/academics/academic-support/services-academic-success}{Services for Academic Success}}}
-		{\emph{\DatestampYM{2013}{09} --\DatestampYM{2013}{12}}}
-	\pdfbookmark[3]{By-Appointment Tutor}{PDF:ByApptTutor}
-	\headerrow
-		{\emph{By-Appointment Tutor (Computer Science), \href{https://www.rocky.edu/academics/academic-support/services-academic-success}{Services for Academic Success}}}
-		{\emph{\DatestampYM{2012}{09} --\DatestampYM{2014}{05}}}
-	\pdfbookmark[3]{System Administrator}{PDF:SysAdmin}
-	\headerrow
-		{\emph{System Administrator, Computer Science Department}}
-		{\emph{\DatestampYM{2012}{03} --\DatestampYM{2014}{05}}}
-	\pdfbookmark[3]{Help Desk Assistant}{PDF:HelpDeskAssistant}
-	\headerrow
-		{\emph{Help Desk Assistant, \href{https://www.rocky.edu/resources/offices-departments/academic-computing}{Academic Computing}}}
-		{\emph{\DatestampYM{2011}{09} --\DatestampYM{2013}{05}}}
-	\pdfbookmark[3]{Website Administrator (CS Department)}{PDF:WebAdmin_CSDept}
-	\headerrow
-		{\emph{Website Administrator, Computer Science Department}}
-		{\emph{\DatestampYM{2010}{09} --\DatestampYM{2011}{05}}}
-\end{itemize}
-
 
 \hrule
 \vspace{-0.5em}
 \subsection*{Education}
 \pdfbookmark[1]{Education}{PDF:Education}
-
-\begin{itemize}
-	\parskip=0.1em
-
-	\item
-	\pdfbookmark[2]{Rocky Mountain College}{PDF:Edu_RockyMountainCollege}
-	\headerrow
-		{\textbf{\href{http://www.rocky.edu/}{Rocky Mountain College}}}
-		{\textbf{Billings, MT}}
-	\pdfbookmark[3]{Bachelor of Science in Computer Science}{PDF:BSinCS}
-	\headerrow
-		{\emph{Bachelor of Science in \href{http://cs.rocky.edu/}{Computer Science}}}
-		{\emph{\DatestampYM{2010}{08} --\DatestampYM{2014}{05}}}
-	\textbf{Languages and Technologies:} Java, Python, JavaScript, PHP, HTML, CSS, SQL, XML, C, ASM, Concurrent Versions System (CVS)
-\end{itemize}
+\pdfbookmark[2]{Bachelor of Science in Computer Science at Rocky Mountain College}{PDF:BSinCSRockyMountainCollege}
+\headerrow
+	{\textbf{Bachelor of Science in Computer Science @ \href{http://www.rocky.edu/}{Rocky Mountain College}}}
+	{\textbf{Billings, MT \DatestampYM{2010}{08} --\DatestampYM{2014}{05}}}
+\emph{Languages and Technologies: Java, Python, JavaScript, PHP, HTML, CSS, SQL, XML, C, ASM, Concurrent Versions System (CVS)}
 
 \end{document}
