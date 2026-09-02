@@ -5,7 +5,7 @@
 
 \RequirePackage{hyperref}
 
-\usepackage[letterpaper,margin=0.4in]{geometry}
+\usepackage[letterpaper,margin=0.5in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
 \usepackage[T1]{fontenc}
@@ -21,6 +21,16 @@
 	#1 &
 	#2 \\
 \end{tabular*}}
+
+% Compact nested lists without the default vertical gaps at their boundaries.
+\newenvironment{subitemize}
+{\begin{list}{\labelitemii}{%
+	\setlength{\topsep}{0.15em}%
+	\setlength{\partopsep}{0pt}%
+	\setlength{\itemsep}{0pt}%
+	\setlength{\parsep}{0pt}%
+	\def\makelabel##1{\hss\llap{##1}}}}
+{\end{list}}
 
 % Datestamp format (default): {yyyy}{MM}{dd} ---> MMM yyyy (e.g., Jan 2008).
 \newcommand{\DatestampYM}[2]{\mbox{\ShortMonth{#2}#1}}
@@ -108,27 +118,27 @@ breaklinks
 \begin{itemize*}
 	\item Consulted on-site at the Army Software Factory (ASWF), a partnership between the U.S. Army and Tanzu Labs, for training soldier and Department of the Army (DA) civilian software engineers through delivering cloud-native software solutions for use across the Army.
 	\item As a Software Engineering Practice Lead for the ASWF from September 2024 through March 2025:
-		\begin{itemize*}
+		\begin{subitemize}
 			\item Defined a set of core practices drawing on Extreme Programming (XP), lean product management, and user-centered design principles that informed the organization's official guidelines and helped establish the Army's FA28 functional area.
 			\item Revised evaluation criteria and processes for progression through apprentice, junior, and intermediate career levels based on direct experience working with software engineers of all levels, across a variety of teams and applications, in prior roles.
 			\item Organized presentations and facilitated group discussions on software development best practices applicable to all career levels.
-		\end{itemize*}
+		\end{subitemize}
 	\item As an inaugural member of the Software Development Unit (SDU) Enablement Team (SDUET), provided technical leadership to an SDU consisting of five application teams, from September 2023 to September 2024:
-		\begin{itemize*}
+		\begin{subitemize}
 		\item Established responsibilities and set expectations for a new one-to-many enablement offering on the ASWF engagement.
 		\item Regularly held one-on-one mentoring sessions for twenty junior- and intermediate-level engineers.
 		\item Coordinated evaluation of twelve apprentice engineers to junior level, while coaching first-time evaluators on the process.
-		\end{itemize*}
+		\end{subitemize}
 		\item As a Tech Lead on an application development team from July 2023 to September 2023:
-		\begin{itemize*}
+		\begin{subitemize}
 			\item Within two months, onboarded an entirely new development team of four apprentice-level engineers and their consultant pairs to assume full development responsibility for two applications.
-		\end{itemize*} 
+		\end{subitemize}
 		\item As a Senior Software Engineer on an application development team from December 2022 to July 2023:
-		\begin{itemize*}
+		\begin{subitemize}
 			\item Guided the team through reducing the scope of a proposed MVP while still delivering a functional application, resulting in launching a month earlier than the initial estimate and shortening the time to getting hands-on user feedback.
 			\item Mentored two apprentice-level engineers up to and through their evaluations for advancement to junior level.
 			\item Advised two junior-level engineers on career progression plans and growth opportunities aligned with team objectives.
-		\end{itemize*}
+		\end{subitemize}
 \end{itemize*}
 \pdfbookmark[2]{Full-Stack Software Developer at Signature Science}{PDF:FullStackDeveloperDatabaseSpecialistSignatureScience}
 \textbf{\headerrow
