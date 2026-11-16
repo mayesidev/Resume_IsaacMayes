@@ -11,6 +11,14 @@ This is Isaac Mayes's resume. It is written in LaTeX (initially, as an excuse to
 **Resume source:**
 <https://github.com/mayesidev/Resume_IsaacMayes>
 
+## PDF generation process
+
+Use local LaTeX tooling to regenerate the PDF from the `.tex` file, such as the [LaTeX Workshop VSCode Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) paired with [MacTeX](https://www.tug.org/mactex/) on Mac.
+
+## PNG generation process
+
+1. Install [poppler](https://poppler.freedesktop.org/) in an appropriate manner for the host system (eg, via Brew for Mac).
+2. Run `pdftoppm -png -singlefile -r 150 Resume_IsaacMayes.pdf Resume_IsaacMayes` or equivalent in the repository's directory.
 
 ## Template information
 
